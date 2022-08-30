@@ -1,5 +1,5 @@
 {% set name = "pycoingecko" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycoingecko-{{ version }}.tar.gz
-  sha256: 9add73085729b1f10f93c7948490b09e8cd47c29bebe47dccb319e8b49502d0c
+  sha256: 732c4fab2abfe0d001de96247e6c8764279a9032a7aa16fcc1dbea8ecb96b787
 
 build:
   number: 0
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENCE
-  summary: 'Python wrapper for the CoinGecko API'
+  summary: Python wrapper for the CoinGecko API
   description: |
     Python3 wrapper around the CoinGecko API (V3)
   doc_url: https://github.com/man-c/pycoingecko
