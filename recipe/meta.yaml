@@ -1,5 +1,5 @@
 {% set name = "pycoingecko" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycoingecko-{{ version }}.tar.gz
-  sha256: bd49d92f918bc3f03ba9c042558844992576fbee859e438ddeafefd41861d2b1
+  sha256: dcc08522c160e88bd1deb50bbab390be33dce87abb10a91ce6013d15bf859c12
 
 build:
   number: 0
