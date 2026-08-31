@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: pycoingecko
+  version: "3.2.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pycoingecko-${{ version }}.tar.gz
+  sha256: c48935d6e608efd9a798cbc4be30f1b43176cb680503dfef8f9352e038fc7605
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - requests
+
+tests:
+  - python:
+      imports:
+        - pycoingecko
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: MIT
+  license_file: LICENCE
+  summary: Python wrapper for the CoinGecko API
+  description: |
+    Python3 wrapper around the CoinGecko API (V3)
+  homepage: https://github.com/man-c/pycoingecko
+  repository: https://github.com/man-c/pycoingecko
+  documentation: https://github.com/man-c/pycoingecko
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
